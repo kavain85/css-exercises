@@ -12,6 +12,10 @@ body {
   background: white;
   border-bottom: 1px solid #ddd;
   box-shadow: 0 0 8px rgba(0,0,0,.1);
+  display: flex;
+/*  align-items: center;    (not needed)*/
+  justify-content: space-between;
+  padding: 10px;
 }
 
 .profile-image {
@@ -45,4 +49,33 @@ a {
 
 ul {
   list-style-type: none;
+  margin: 0; /* missed this */
+  padding: 0; /* missed this one too :( */
+}
+
+/* redundant, could have put under 'ul' vs calling different class */
+.links {
+  display: flex;
+  gap: 20px;
+}
+
+/* This was my solution, created extra work by duplicating classes... 
+
+.left-side {
+  display: flex;
+  align-items: center;
+  gap: 10px; 
+}
+
+.right-side {
+  display: flex;
+  gap: 10px;
+}
+*/
+
+/* actual solution */
+.left-side, .right-side {
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }

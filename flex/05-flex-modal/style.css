@@ -20,6 +20,9 @@ body {
   width: 480px;
   border-radius: 10px;
   box-shadow: 2px 4px 16px rgba(0,0,0,.2);
+  display: flex; /* got it! */
+  padding: 15px; /* got it! */
+  gap: 10px; /* got it! */
 }
 
 .icon {
@@ -30,7 +33,9 @@ body {
   width: 42px;
   height: 42px;
   border-radius: 50%;
+/*  margin: 0 10px; not needed */
   display: flex;
+  flex-shrink: 0; /* got it! */
   align-items: center;
   justify-content: center;
 }
@@ -63,4 +68,22 @@ button.cancel {
   background: white;
   border: 1px solid #ddd;
   color: royalblue;
+}
+/* solution put close button div as child of header div, i made it work, but probably overcomplicated it */
+.header-close {
+  display: flex;
+  align-items: center;
+  flex: auto;
+  justify-content: space-between;
+}
+
+.header {
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.right-side {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
